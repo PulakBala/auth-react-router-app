@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../contexts/UserContext';
 
 const Header = () => {
+
     const {user} = useContext(AuthContext);
     console.log('contact', user);
+    
     return (
         <div>
             <div className="navbar bg-primary text-primary-content">
