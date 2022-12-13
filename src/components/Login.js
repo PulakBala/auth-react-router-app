@@ -4,7 +4,7 @@ import { AuthContext } from '../contexts/UserContext';
 const Login = () => {
 
   const {signIn} = useContext(AuthContext);
-  console.log('sign in ', signIn);
+ 
 
   const handleSubmit = event =>{
     event.preventDefault();
@@ -18,6 +18,7 @@ const Login = () => {
     .then(result =>{
       const user = result.user;
       console.log(user);
+      form.reset();
     })
     .catch(error =>{
       console.error('error', error);
